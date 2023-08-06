@@ -2,6 +2,8 @@
  * 题目来源：https://www.luogu.com.cn/problem/P2123
  */
 
+// hint: https://www.luogu.com.cn/problem/solution/P2123
+
 #include <bits/stdc++.h>
 
 using namespace std;
