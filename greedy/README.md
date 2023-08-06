@@ -25,11 +25,11 @@
 > 如果交换前更优当且仅当
 >
 > $$
-\max(\frac{s}{b_i}, \frac{s \cdot a_i}{b_{i+1}}) \leq \max(\frac{s}{b_{i+1}}, \frac{s \cdot a_{i+1}}{b_i})
+\max(\frac{s}{b_i}, \frac{s \cdot a_i}{b_{i+1}}) < \max(\frac{s}{b_{i+1}}, \frac{s \cdot a_{i+1}}{b_i})
 > $$
 > 化简得到
 > $$
-\max(b_{i+1}, a_i \cdot b_i) \leq \max(b_i, a_{i+1} \cdot b_{i+1})
+\max(b_{i+1}, a_i \cdot b_i) < \max(b_i, a_{i+1} \cdot b_{i+1})
 > $$
 > 实现的时候我们将输入的两个数用一个结构体来保存并重载运算符：
 
@@ -38,7 +38,7 @@ struct uv {
   int a, b;
 
   bool operator<(const uv& x) const {
-    return max(x.b, a * b) <= max(b, x.a * x.b);
+    return max(x.b, a * b) < max(b, x.a * x.b);
   }
 };
 ```
