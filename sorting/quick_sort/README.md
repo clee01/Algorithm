@@ -54,3 +54,6 @@ void quick_sort(T arr[], const int len) {
   }
 }
 ```
+
+## 优化
+### 三路快速排序
