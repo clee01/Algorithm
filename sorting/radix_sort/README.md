@@ -11,7 +11,6 @@
 ### 参考代码
 * 对自然数排序
 ```cpp
-// Buggy!
 #include <algorithm>
 #include <stack>
 #include <tuple>
